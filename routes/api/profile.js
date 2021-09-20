@@ -5,7 +5,6 @@ const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
-const { restart } = require('nodemon');
 
 //@route GET api/profile/me
 //@desc get current users profile
@@ -110,6 +109,6 @@ router.get('/', async (req, res) => {
         console.error(err.message);
         res.status(500).send('server error')
     }
-})
+});
 
 module.exports = router;
